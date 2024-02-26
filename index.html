@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="assets/vendor/charts/chartist-bundle/chartist.css">
+    <link rel="stylesheet" href="assets/vendor/charts/morris-bundle/morris.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    
+    <div class="dashboard-main-wrapper">
+       
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <a class="navbar-brand" href="./index.html">Columban College</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        <li class="nav-item">
+                            <div id="custom-search" class="top-search-bar">
+                                <input class="form-control" type="text" placeholder="Search..">
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown notification">
+                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                                <li>
+                                    <div class="notification-title"> Notification</div>
+                                    <div class="notification-list">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="./assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeffrey Culanag</span>Logged in.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="./assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Soho</span>Logged out.
+                                                        <div class="notification-date">2 days ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="./assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Moana</span>Got the heart of tafitti.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="./assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Rapunzel</span>Got a new haircut.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-footer"> <a href="#">View all notifications</a></div>
+                                </li>
+                            </ul>
+                        </li>
+                       
+                        <li class="nav-item dropdown nav-user">
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">Admin</h5>
+                                    <span class="status"></span><span class="ml-2">Available</span>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                                <a class="dropdown-item" href="./pages/login.html"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                Menu
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Dashboard</a>
+                            </li>
+      
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fas fa-book"></i>Data Records</a>
+                                <div id="submenu-2" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/data-tables.html">Student Records</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/data-tables2.html">Student Profilesss</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/admin.html">Admin Profile</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/cards.html"><i class="fas fa-desktop"></i>PC</a>
+                            </li>
+  
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+      
+        <div class="dashboard-wrapper">
+            <div class="">
+                <div class="container-fluid dashboard-content ">
+                   
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <div class="container row">
+                                    <h2 class="pageheader-title col-md m-t-10">Dashboard</h2>
+                                    <div class="col-md-3 col-md">
+                                        <div class="text-dark">
+                                            <div class="text-center">
+                                                <p class="display-5 mt-2">
+                                                <a><span class="badge hours display-7"></span></a> :
+                                                <a><span class="badge min display-7"></span></a> :
+                                                <a><span class="badge sec display-7"></span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Main</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+
+                               
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="">
+                      
+                        <div class="row">
+                           
+                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-inline-block">
+                                            <h5 class="text-muted">Total Students</h5>
+                                            <h2 class="mb-0"> 3,763</h2>
+                                        </div>
+                                        <div class="float-right icon-circle-medium  icon-box-lg  bg-primary-light mt-1">
+                                            <i class="fa fa-user fa-fw fa-sm text-primary"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-inline-block">
+                                            <h5 class="text-muted">Total Active PC</h5>
+                                            <h2 class="mb-0">14</h2>
+                                        </div>
+                                        <div class="float-right icon-circle-medium  icon-box-lg  bg-secondary-light mt-1">
+                                            <i class="fa fa-desktop fa-fw fa-sm text-secondary"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-inline-block">
+                                            <h5 class="text-muted">Total Student Records</h5>
+                                            <h2 class="mb-0"> 2,432</h2>
+                                        </div>
+                                        <div class="float-right icon-circle-medium  icon-box-lg  bg-brand-light mt-1">
+                                            <i class="fa fa-file-alt fa-fw fa-sm text-brand"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-inline-block">
+                                            <h5 class="text-muted">Total PC Available</h5>
+                                            <h2 class="mb-0"> 36</h2>
+                                        </div>
+                                        <div class="float-right icon-circle-medium  icon-box-lg  bg-info-light mt-1">
+                                            <i class="fa fa-eye fa-fw fa-sm text-info"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+
+                       
+                        <div class="row">
+                            <!-- Table -->            
+                            <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">Recent Records</h5>
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class="bg-light">
+                                                    <tr class="border-0">
+                                                        <th class="border-0">#</th>
+                                                        <th class="border-0">Image</th>
+                                                        <th class="border-0">Student Name</th>
+                                                        <th class="border-0">Student Id</th>
+                                                        <th class="border-0">PC Number</th>
+                                                        <th class="border-0">Time In</th>
+                                                        <th class="border-0">TIme Out</th>
+                                                        <th class="border-0">Date</th>
+                                                        <th class="border-0">Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>
+                                                            <div class="m-r-10"><img src="assets/images/product-pic.jpg" alt="user" class="rounded" width="45"></div>
+                                                        </td>
+                                                        <td>Jeffrey Culanag </td>
+                                                        <td>id000001 </td>
+                                                        <td>1</td>
+                                                        <td>1:00 PM</td>
+                                                        <td>--</td>
+                                                        <td>Yuri Garcia </td>
+                                                        <td><span class="badge-dot badge-brand mr-1"></span>In Use</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>
+                                                            <div class="m-r-10"><img src="assets/images/product-pic-2.jpg" alt="user" class="rounded" width="45"></div>
+                                                        </td>
+                                                        <td>Jeffrey Culanag </td>
+                                                        <td>id000001 </td>
+                                                        <td>1</td>
+                                                        <td>1:00 PM</td>
+                                                        <td>1:30 PM</td>
+                                                        <td>Yuri Garcia </td>
+                                                        <td><span class="badge-dot badge-success mr-1"></span>Online </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>
+                                                            <div class="m-r-10"><img src="assets/images/product-pic.jpg" alt="user" class="rounded" width="45"></div>
+                                                        </td>
+                                                        <td>Jeffrey Culanag </td>
+                                                        <td>id000001 </td>
+                                                        <td>1</td>
+                                                        <td>1:00 PM</td>
+                                                        <td>--</td>
+                                                        <td>Yuri Garcia </td>
+                                                        <td><span class="badge-dot badge-brand mr-1"></span>In Use</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>
+                                                            <div class="m-r-10"><img src="assets/images/product-pic-2.jpg" alt="user" class="rounded" width="45"></div>
+                                                        </td>
+                                                        <td>Jeffrey Culanag </td>
+                                                        <td>id000001 </td>
+                                                        <td>1</td>
+                                                        <td>1:00 PM</td>
+                                                        <td>3:00PM</td>
+                                                        <td>Yuri Garcia </td>
+                                                        <td><span class="badge-dot badge-danger mr-1"></span>Offline </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="9"><a href="#" class="btn btn-outline-light float-right">View Details</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Table -->
+                            <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">Timeline Activities</h5>
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table no-wrap p-table">
+                                                <thead class="bg-light">
+                                                    <tr class="border-0">
+                                                        <th class="border-0">Name</th>
+                                                        <th class="border-0">Time</th>
+                                                        <th class="border-0">Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Yuri Garcia</td>
+                                                        <td>1:15 PM</td>
+                                                        <td><span class="badge-dot badge-danger"></span>Logged Out</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Yuri Garcia</td>
+                                                        <td>1:15 PM</td>
+                                                        <td><span class="badge-dot badge-success"></span>Logged In</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Yuri Garcia</td>
+                                                        <td>1:15 PM</td>
+                                                        <td><span class="badge-dot badge-danger"></span>Logged Out</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Yuri Garcia</td>
+                                                        <td>1:15 PM</td>
+                                                        <td><span class="badge-dot badge-danger"></span>Logged Out</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Yuri Garcia</td>
+                                                        <td>1:15 PM</td>
+                                                        <td><span class="badge-dot badge-danger"></span>Logged Out</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Yuri Garcia</td>
+                                                        <td>1:15 PM</td>
+                                                        <td><span class="badge-dot badge-danger"></span>Logged Out</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3">
+                                                            <a href="#" class="btn btn-outline-light float-right">Details</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                      
+            
+                        </div>
+                     
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+        
+    </div>
+    
+
+    <script>
+        $(document).ready(function() {
+        setInterval( function() {
+        var hours = new Date().getHours();
+        $(".hours").html(( hours < 10 ? "0" : "" ) + hours);
+        }, 1000);
+        setInterval( function() {
+        var minutes = new Date().getMinutes();
+        $(".min").html(( minutes < 10 ? "0" : "" ) + minutes);
+        },1000);
+        setInterval( function() {
+        var seconds = new Date().getSeconds();
+        $(".sec").html(( seconds < 10 ? "0" : "" ) + seconds);
+        },1000);
+        });
+        </script>
+    <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <!-- bootstap bundle js -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- slimscroll js -->
+    <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <!-- main js -->
+    <script src="assets/libs/js/main-js.js"></script>
+    <!-- sparkline js -->
+    <script src="assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+    <!-- morris js -->
+    <script src="assets/vendor/charts/morris-bundle/raphael.min.js"></script>
+    <script src="assets/vendor/charts/morris-bundle/morris.js"></script>
+   
+</body>
+ 
+</html>
